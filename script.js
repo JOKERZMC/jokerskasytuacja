@@ -1,11 +1,17 @@
-const map = L.map("map").setView([34.0522,-118.2437],11);
+const map = L.map('map', {
+    crs: L.CRS.Simple,
+    minZoom: -2,
+    maxZoom: 2
+});
 
-L.tileLayer(
-'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-{
-    attribution:'© OpenStreetMap'
-}).addTo(map);
+const width = 8192;
+const height = 8192;
 
-L.marker([34.0522,-118.2437])
-.addTo(map)
-.bindPopup("Los Angeles");
+const bounds = [
+    [0, 0],
+    [height, width]
+];
+
+L.imageOverlay('image.png', bounds).addTo(map);
+
+map.fitBounds(bounds);
