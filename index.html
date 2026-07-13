@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Mapa Gangów</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Map</title>
 
-<link rel="stylesheet"
-href="https://unpkg.com/leaflet/dist/leaflet.css">
-
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div id="sidebar">
+    <h1>GTA MAP</h1>
+
+    <input type="text" id="search" placeholder="🔍 Szukaj...">
+
+    <div class="category">
+        <label><input type="checkbox" checked> Gangi</label>
+    </div>
+
+    <div class="category">
+        <label><input type="checkbox" checked> Sklepy</label>
+    </div>
+
+    <div class="category">
+        <label><input type="checkbox" checked> Bronie</label>
+    </div>
+
+    <div class="category">
+        <label><input type="checkbox" checked> Domy</label>
+    </div>
+
+    <div class="category">
+        <label><input type="checkbox" checked> Misje</label>
+    </div>
+</div>
 
 <div id="map"></div>
 
@@ -19,5 +44,3 @@ href="https://unpkg.com/leaflet/dist/leaflet.css">
 
 </body>
 </html>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="script.js"></script>
