@@ -1,8 +1,30 @@
 [
     {
         "name":"Families",
+        "type":"gang",
         "x":3500,
-        "y":3000,
-        "type":"gang"
+        "y":2600,
+        "description":"Teren Families."
+    },
+    {
+        "name":"Ballas",
+        "type":"gang",
+        "x":4200,
+        "y":3100,
+        "description":"Teren Ballas."
+    },
+    {
+        "name":"Ammu-Nation",
+        "type":"weapon",
+        "x":4700,
+        "y":3900,
+        "description":"Sklep z bronią."
+    },
+    {
+        "name":"24/7",
+        "type":"shop",
+        "x":3000,
+        "y":1800,
+        "description":"Sklep spożywczy."
     }
 ]
