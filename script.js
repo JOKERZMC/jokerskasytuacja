@@ -1,17 +1,22 @@
-const map = L.map('map', {
-    crs: L.CRS.Simple,
-    minZoom: -2,
-    maxZoom: 2
+const map = L.map('map',{
+    crs:L.CRS.Simple,
+    minZoom:-3,
+    maxZoom:3
 });
 
-const width = 8192;
-const height = 8192;
+const img=new Image();
 
-const bounds = [
-    [0, 0],
-    [height, width]
+img.onload=function(){
+
+const bounds=[
+[0,0],
+[img.height,img.width]
 ];
 
-L.imageOverlay('image.png', bounds).addTo(map);
+L.imageOverlay('image.png',bounds).addTo(map);
 
 map.fitBounds(bounds);
+
+};
+
+img.src='image.png';
